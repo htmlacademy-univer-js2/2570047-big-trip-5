@@ -44,14 +44,14 @@ export default class RoutePoint {
     getTemplate(){
         return createPointsTemplate();
     }
-    
+
     getElement(){
         if(!this.element){
         this.element = createElement(this.getTemplate());
         }
         return this.element;
     }
-    
+
     removeElement(){
         this.element = null;
     }

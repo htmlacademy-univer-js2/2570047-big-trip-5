@@ -1,4 +1,4 @@
-import { createElement } from "../render.js";
+import { createElement } from '../render.js';
 
 function createFiltersTemplate() {
     return `<form class="trip-filters" action="#" method="get">
@@ -30,7 +30,7 @@ export default class Filters {
     getTemplate() {
         return createFiltersTemplate();
     }
-    
+
     getElement() {
         if (!this.element) {
             this.element = createElement(this.getTemplate());
@@ -38,7 +38,7 @@ export default class Filters {
 
         return this.element;
     }
-    
+
     removeElement() {
         this.element = null;
     }
