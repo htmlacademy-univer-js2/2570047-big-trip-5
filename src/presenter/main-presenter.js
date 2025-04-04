@@ -7,7 +7,7 @@ import flatpickr from 'flatpickr';
 import 'flatpickr/dist/flatpickr.min.css';
 
 export default class MainPresenter {
-    constructor ({container, model}) {
+    constructor (container, model) {
         const tripEventsList = document.createElement('ul');
         tripEventsList.className = 'trip-events__list';
         container.appendChild(tripEventsList);
