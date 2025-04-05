@@ -21,8 +21,8 @@ export default class MainPresenter {
     }
 
     init(){
-        for(let i = 0; i < this.pointModel.getPoints().length; i++){
-            this.#renderPoint(this.pointModel.getPoints()[i]);
+        for(let i = 0; i < this.pointModel.points.length; i++){
+            this.#renderPoint(this.pointModel.points[i]);
         }
         flatpickr('#event-start-time-1', {
             enableTime: true,
