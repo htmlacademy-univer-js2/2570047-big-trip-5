@@ -1,5 +1,5 @@
 import AbstractView from '../framework/view/abstract-view.js';
-import { capitalizeString, humanizeDate, getOfferKeyword } from '../utils.js';
+import { capitalizeString, humanizeDate, getOfferKeyword } from '../utils/utils.js';
 
 function createFormTemplate(pointModel,offerModel,destinationModel){
   const {
