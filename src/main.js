@@ -2,7 +2,7 @@ import { render } from './framework/render.js';
 import Sort from './view/sort.js';
 import EmptyList from './view/empty-list.js';
 import Filter from './view/filters.js';
-import MainPresenter from './presenter/main-presenter.js';
+import MainPresenter from './presenter/list-presenter.js';
 import PointModel from './model/point-models.js';
 import OfferModel from './model/offer-model.js';
 import DestinationModel from './model/destination-model.js';
