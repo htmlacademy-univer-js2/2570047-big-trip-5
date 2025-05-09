@@ -4,11 +4,11 @@ import { capitalizeString, getDurationTime, humanizeDate } from '../utils/utils.
 function createPointsTemplate(pointModel,offerModel,destinationModel){
   const {
     basePrice,
-     dateFrom,
-     dateTo,
-     destination,
-     isFavorite,
-     offers,
+    dateFrom,
+    dateTo,
+    destination,
+    isFavorite,
+    offers,
     type
   } = pointModel;
 
@@ -61,7 +61,7 @@ function createPointsTemplate(pointModel,offerModel,destinationModel){
 `;
 }
 
-export default class Point extends AbstractView{
+export default class PointView extends AbstractView{
   pointModel;
   #offerModel;
   #destinationModel;
