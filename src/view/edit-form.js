@@ -17,7 +17,7 @@ function createFormTemplate(pointModel,offerModel,destinationModel){
   }
 
   const allOffers = offerModel.getOfferByType(type);
-   const {name, description, pictures} = destinationModel.getDestinationById(destination);
+  const {name, description, pictures} = destinationModel.getDestinationById(destination);
   return `
             <li class="trip-events__item">
               <form class="event event--edit" action="#" method="post">
@@ -158,7 +158,7 @@ function createFormTemplate(pointModel,offerModel,destinationModel){
   `;
 }
 
-export default class EditForm extends AbstractView{
+export default class EditFormView extends AbstractView{
   #pointModel;
   #offerModel;
   #destinationModel;
@@ -172,8 +172,9 @@ export default class EditForm extends AbstractView{
     this.#offerModel = offerModel;
     this.#destinationModel = destinationModel;
     this.#editForm = this.element.querySelector('.event--edit');
-    this.closeButton = this.element.querySelector('.event__rollup-btn');
-    this.closeButton.addEventListener('click', onEditButtonClick);
+    this.#closeButton = this.element.querySelector('.event__rollup-btn');
+    this.#closeButton.addEventListener('click', onEditButtonClick);
+    this.#onFormSubmit = onFormSubmit;
     this.#editForm.addEventListener('submit', (evt)=>this.#onFormSubmit(evt, this.#pointModel));
   }
 
