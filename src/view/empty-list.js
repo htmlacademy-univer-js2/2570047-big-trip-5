@@ -1,6 +1,7 @@
 import AbstractView from '../framework/view/abstract-view.js';
+import { emptyListMessages } from '../const.js';
 
-function createEmptyListTemplate(){
+function createEmptyListTemplate(actualFilter){
   return `
         <section class="trip-events">
           <h2 class="visually-hidden">Trip events</h2>
@@ -14,16 +15,19 @@ function createEmptyListTemplate(){
               * Present — 'There are no present events now';
               * Future — 'There are no future events now'.
           -->
+          <p class="trip-events__msg">${emptyListMessages[actualFilter]}</p>
         </section>
 `;
 }
 
 export default class EmptyListView extends AbstractView{
-  constructor(){
+  #actualFilter;
+  constructor(actualFilter){  
     super();
+    this.#actualFilter = actualFilter;
   }
 
   get template(){
-    return createEmptyListTemplate();
+    return createEmptyListTemplate(this.#actualFilter);
   }
 }
