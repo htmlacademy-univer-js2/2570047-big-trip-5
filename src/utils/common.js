@@ -17,4 +17,4 @@ function toCamelCase(obj){
     }, {});
 }
   
-export { updateItem,toCamelCase };
+export { toCamelCase };

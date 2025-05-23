@@ -76,8 +76,7 @@ export default class PointView extends AbstractView{
     this.#rollupButton = this.element.querySelector('.event__rollup-btn');
     this.#favoriteButton = this.element.querySelector('.event__favorite-btn');
     this.#rollupButton.addEventListener('click',onEditButtonClick);
-    this.#favoriteButton.addEventListener('click',()=>
-      onFavoriteButtonClick({...this.pointModel,isFavorite:!this.pointModel.isFavorite}));
+    this.#favoriteButton.addEventListener('click', onFavoriteButtonClick);
   }
 
   get template(){
