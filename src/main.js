@@ -14,7 +14,7 @@ const filter = generateFilters(new PointModel().points);
 render(new Filter(filter), siteHeaderFiltersElement);
 if(filter[0].count === 0){
   render(new EmptyListView(),siteBodySortElement);
-} else{
+} else {
   const mainPresenter = new MainPresenter(siteBodySortElement,
     new PointModel(),new OfferModel(), new DestinationModel());
   mainPresenter.init();
