@@ -6,6 +6,9 @@ import OfferModel from './model/offer-model.js';
 import DestinationModel from './model/destination-model.js';
 import NewPointView from './view/new-point-view.js';
 import { render, RenderPosition } from './framework/render.js';
+import PointsApiService from './api/point-api-service.js';
+import OffersApiService from './api/offer-api-service.js';
+import DestinationsApiService from './api/destination-api-service.js';
 
 const siteHeaderFiltersElement = document.querySelector('.trip-controls__filters');
 const siteBodySortElement = document.querySelector('.trip-events');
