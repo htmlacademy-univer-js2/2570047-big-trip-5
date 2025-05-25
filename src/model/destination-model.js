@@ -1,11 +1,11 @@
 import { UpdateType } from '../const';
 import Observable from '../framework/observable';
- 
+
 export default class DestinationModel extends Observable {
   #destinations = [];
   #destinationsApiService;
   #isLoaded = false;
- 
+
   constructor(destinationsApiService) {
     super();
     this.#destinationsApiService = destinationsApiService;
@@ -24,12 +24,12 @@ export default class DestinationModel extends Observable {
   get destinations() {
     return this.#destinations;
   }
- 
+
   get isLoaded() {
     return this.#isLoaded;
   }
 
   getDestinationById(id) {
-    return this.#destinations.find((item) => item.id === id) || { name: '', description: '', pictures: [] };;
+    return this.#destinations.find((item) => item.id === id) || { name: '', description: '', pictures: [] };
   }
 }
