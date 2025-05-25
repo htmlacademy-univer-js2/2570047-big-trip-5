@@ -4,7 +4,7 @@ import flatpickr from 'flatpickr';
 import 'flatpickr/dist/flatpickr.min.css';
 import he from 'he';
 
-function createFormTemplate(state,offerModel,destinationModel, isNewPoint){  
+function createFormTemplate(state,offerModel,destinationModel, isNewPoint){
   const {
     basePrice,
     dateFrom,
@@ -187,7 +187,7 @@ export default class EditFormView extends AbstractStatefulView{
     this.#onFormSubmit = onFormSubmit;
     this.#onDeletePoint = onDeletePoint;
     this._restoreHandlers();
-    }
+  }
 
   get template(){
     return createFormTemplate(this._state,this.#allOffers,this.#allDestination,this.#isNewPoint);
@@ -289,7 +289,7 @@ export default class EditFormView extends AbstractStatefulView{
     });
   };
 
-#onDeleteStateButton = (evt) => {
+  #onDeleteStateButton = (evt) => {
     evt.preventDefault();
     this.#onDeletePoint(EditFormView.parseStateToPoint(this._state));
   };

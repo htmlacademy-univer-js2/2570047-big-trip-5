@@ -22,7 +22,7 @@ function createEmptyListTemplate(actualFilter){
 
 export default class EmptyListView extends AbstractView{
   #actualFilter;
-  constructor(actualFilter){  
+  constructor(actualFilter){
     super();
     this.#actualFilter = actualFilter;
   }
