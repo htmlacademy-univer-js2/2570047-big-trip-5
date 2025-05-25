@@ -2,10 +2,10 @@ import AbstractView from '../framework/view/abstract-view.js';
 import { capitalizeString } from '../utils/utils.js';
 
 function createFilterTemplate(filters, actualFilterType){
-    return `
+  return `
         <form class="trip-filters" action="#" method="get">
           ${filters.length > 0 ? filters.map(({type,count})=>
-          `<div class="trip-filters__filter">
+    `<div class="trip-filters__filter">
             <input
               id="filter-${type}"
               class="trip-filters__filter-input visually-hidden"
@@ -17,7 +17,7 @@ function createFilterTemplate(filters, actualFilterType){
             >
             <label class="trip-filters__filter-label" for="filter-${type}">${capitalizeString(type)}</label>
           </div>`
-        ).join('') : ''}
+  ).join('') : ''}
           <button class="visually-hidden" type="submit">Accept filter</button>
         </form>
 `;

@@ -18,8 +18,8 @@ export default class PointModel extends Observable {
     } catch (err) {
       this.#points = [];
     }
-      this.#isLoaded = true;
-      this._notify(UpdateType.INIT);
+    this.#isLoaded = true;
+    this._notify(UpdateType.INIT);
   }
 
   get points() {
@@ -83,6 +83,6 @@ export default class PointModel extends Observable {
     delete adaptedPoint['is_favorite'];
     delete adaptedPoint['base_price'];
 
-    return adaptedPoint;        
+    return adaptedPoint;
   }
 }

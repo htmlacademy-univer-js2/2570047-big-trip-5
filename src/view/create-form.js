@@ -175,5 +175,4 @@ export default class CreateFormView extends AbstractView{
   get template(){
     return createFormTemplate();
   }
-
 }
