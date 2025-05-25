@@ -1,13 +1,13 @@
 import { UpdateType } from '../const';
 import Observable from '../framework/observable';
- 
- const FIRST_ELEMENT = 0;
- 
+
+const FIRST_ELEMENT = 0;
+
 export default class OfferModel extends Observable {
   #offers = [];
   #offersApiService;
   #isLoaded = false;
- 
+
   constructor(offersApiService) {
     super();
     this.#offersApiService = offersApiService;
@@ -24,10 +24,10 @@ export default class OfferModel extends Observable {
   }
 
   get offers() {
-     return this.#offers;
-   }
- 
-   get isLoaded() {
+    return this.#offers;
+  }
+
+  get isLoaded() {
     return this.#isLoaded;
   }
 
@@ -37,7 +37,7 @@ export default class OfferModel extends Observable {
     }
     return this.#offers.filter((offer) => offer.type === type)[FIRST_ELEMENT].offers.find((item) => item.id === id);
   }
- 
+
   getOfferByType(type) {
     return this.#offers.filter((offer) => offer.type === type).map((offer) => offer.offers).flat();
   }
